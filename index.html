@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- custom style -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="texts">
+      <h2>
+        Learn to code by watching others
+      </h2>
+      <p>
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+        but understanding how developers think is invaluable. 
+      </p>
+    </div>
+
+    <div class="form">
+      <p class="top">
+        Try it free 7 days <span>then $20/mo. thereafter</span> 
+      </p>
+
+      <form action="">
+        <div class="input">
+          <input type="text" placeholder="First Name">
+          <img src="./images/icon-error.svg" alt="" id="err">
+          <p id="errMsg">First Name cannot be empty</p>
+        </div>
+        <div class="input">
+          <input type="text" placeholder="Last Name">
+          <img src="./images/icon-error.svg" alt="" id="err">
+          <p id="errMsg">Last Name cannot be empty</p>
+        </div>
+        <div class="input">
+          <input type="email" name="" id="" placeholder="Email Address">
+          <img src="./images/icon-error.svg" alt="" id="err">
+          <p id="errMsg">Looks like this is not an email</p>
+        </div>
+        <div class="input">
+          <input type="password" name="" id="" placeholder="Password">
+          <img src="./images/icon-error.svg" alt="" id="err">
+          <p id="errMsg">Password cannot be empty</p>
+        </div>
+        <button type="submit">
+          Claim your free trial 
+        </button>
+
+        <p class="bottom">
+          By clicking the button, you are agreeing to our 
+          <span>
+            Terms and Services
+          </span>
+        </p>
+      </form>
+    </div>
+  </div>
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/timiodulate">timiodulate</a>.
+    </p>
+  </footer>
+</body>
+
+<script>
+  const submitBtn = document.querySelector('button[type=submit]');
+  const inputs = document.querySelectorAll('input');
+
+  function checkValidity(e){
+    e.preventDefault();
+
+    inputs.forEach((input) => {
+      const parent = input.parentElement;
+
+      if(!input.validity.valid || input.value === ''){
+
+        const errImage = parent.querySelector('#err');
+        const errMessage = parent.querySelector('p'); 
+
+          errImage.classList.add('show');
+          errMessage.classList.add('show');
+
+          setTimeout(() => {
+            errImage.classList.remove('show');
+            errMessage.classList.remove('show');
+            
+          }, 2000);
+      }
+    })
+  }
+
+  submitBtn.addEventListener('submit', checkValidity);
+  submitBtn.addEventListener('click', checkValidity);
+
+
+</script>
+</html>
