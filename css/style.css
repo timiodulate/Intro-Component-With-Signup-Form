@@ -1,18 +1,18 @@
 /* Global Resets */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 html {
-    font-family: 'Poppins', sans-serif;
+	font-family: "Poppins", sans-serif;
 
-    --red: hsl(0, 100%, 74%);
-    --green: hsl(154, 59%, 51%);
-    --blue: hsl(248, 32%, 49%);
-    --grey-text: hsl(246, 25%, 77%);
-    --text: hsl(249, 10%, 26%);
+	--red: hsl(0, 100%, 74%);
+	--green: hsl(154, 59%, 51%);
+	--blue: hsl(248, 32%, 49%);
+	--grey-text: hsl(246, 25%, 77%);
+	--text: hsl(249, 10%, 26%);
 }
 
 /* Dark mode */
@@ -21,164 +21,169 @@ html {
 } */
 
 body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+	/* height: 100vh; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
 
-    background-image: url(../images/bg-intro-desktop.png);
-    background-color: var(--red);
-    /* background-blend-mode: screen; */
+	background-image: url(../images/bg-intro-desktop.png);
+	background-color: var(--red);
+	/* background-blend-mode: screen; */
 }
-
-
 
 /* container  */
-.container {
-    display: flex;
-    width: 100%;
-    padding: 120px;
-}
-.container .texts {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-}
-.container .texts h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-.container .texts p {
-    width: 80%;
-    line-height: 25px;
-}
-.container .form p.top{
-    color: white;
-    text-align: center;
-    padding: 15px;
-    background-color: var(--blue);
-    border-radius: .5rem;
-    box-shadow: var(--text) 0 3px 6px;
-    margin-bottom: 15px;
-    font-size: .9rem;
-}
-.container .form p.top span{
-    color: var(--grey-text);
-}
-.container .form form{
-    background-color: white;
-    padding: 40px;
-    border-radius: .5rem;
-    box-shadow: var(--text) 0 4px 4px;
-}
-.container .form .input{
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-}
-.container .form .input input {
-    width: 100%;
-    padding: 15px;
-    border: var(--text) solid 1px;
-    border-radius: .3rem;
-}
-.container .form .input input::placeholder {
-    color: var(--text);
-}
-.container .form .input img {
-    position: absolute;
-    top: 11px;
-    right: 20px;
-    display: none;
-}
-.container .form .input .show {
-    display: initial;
-}
-.container .form .input p {
-    color: var(--red);
-    font-size: .7rem;
-    margin-top: 5px;
-    text-align: right;
-    display: none;
-}
-.container .form .input .display {
-    display: initial;
-}
-.container .form button {
-    cursor: pointer;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    background-color: var(--green);
-    border: none;
-    border-radius: .5rem;
-    box-shadow: var(--text) 0 2px 3px;
-    margin-bottom: 15px;
-    width: 100%;
-    text-transform: uppercase;
-}
-.container .form p.bottom {
-    text-align: center;
-    color: var(--grey-text);
-    font-size: .7rem;
-}
-.container .form p.bottom span{
-    color: var(--red);
+main {
+	display: flex;
+
+	flex-direction: column;
+	width: 100%;
+	padding: 40px 20px 0;
 }
 
+main .texts {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+main .texts h2 {
+	font-size: 2rem;
+	width: 90%;
+}
+
+main .texts p {
+	width: 80%;
+	line-height: 25px;
+}
+
+main .form p.top {
+	color: white;
+	text-align: center;
+	padding: 15px;
+	background-color: var(--blue);
+	border-radius: 0.5rem;
+	box-shadow: var(--text) 0 3px 6px;
+	margin-bottom: 15px;
+	font-size: 0.9rem;
+}
+
+main .form p.top span {
+	color: var(--grey-text);
+}
+
+main .form form {
+	background-color: white;
+	padding: 40px;
+	border-radius: 0.5rem;
+	box-shadow: var(--text) 0 4px 4px;
+}
+
+main .form .input {
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 15px;
+}
+
+main .form .input input {
+	width: 100%;
+	padding: 15px;
+	border: var(--text) solid 1px;
+	border-radius: 0.3rem;
+}
+
+main .form .input input::placeholder {
+	color: var(--text);
+}
+
+main .form .input img {
+	position: absolute;
+	top: 11px;
+	right: 20px;
+	display: none;
+}
+
+main .form .input .show {
+	display: initial;
+}
+
+main .form .input p {
+	color: var(--red);
+	font-size: 0.7rem;
+	margin-top: 5px;
+	text-align: right;
+	display: none;
+}
+
+main .form .input .display {
+	display: initial;
+}
+
+main .form button {
+	cursor: pointer;
+	color: white;
+	text-align: center;
+	padding: 15px;
+	background-color: var(--green);
+	border: none;
+	border-radius: 0.5rem;
+	box-shadow: var(--text) 0 2px 3px;
+	margin-bottom: 15px;
+	width: 100%;
+	text-transform: uppercase;
+}
+
+main .form p.bottom {
+	text-align: center;
+	color: var(--grey-text);
+	font-size: 0.7rem;
+}
+
+main .form p.bottom span {
+	color: var(--red);
+}
 
 /* footer */
-.attribution { 
-    font-size: 13px; 
-    text-align: center; 
-    color: white;
-    padding: 20px;
+.attribution {
+	font-size: 13px;
+	text-align: center;
+	color: white;
+	padding: 20px;
 }
-.attribution a { 
-    color: hsl(228, 45%, 44%);
-    text-decoration: none;
+.attribution a {
+	color: hsl(228, 45%, 44%);
+	text-decoration: none;
 }
-
-
-
-/* Media Queries - Responsiveness */
-/* LG - Large Screen */
-/* @media only screen and (max-width: 992px) {
-
-} */
 
 /* MD - Medium Screen */
-@media only screen and (max-width: 765px) {
-    .container {
-        flex-direction: column;
-        width: 100%;
-        padding: 40px 20px 0;
+@media only screen and (min-width: 765px) {
+    body {
+        height: 100vh;
     }
+	main {
+		flex-direction: row;
+        padding: 0 120px;
+	}
 
-    .container .texts {
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        margin-bottom: 40px;
-    }
-    .container .texts h2 {
-        font-size: 2rem;
-        width: 90%;
-    }
-    .container .texts p {
-        width: 80%;
-    }
+	main .texts {
+		width: 50%;
+		margin-bottom: 0;
+		text-align: left;
+		align-items: initial;
+	}
+
+	main .texts h2 {
+		font-size: 3rem;
+		margin-bottom: 20px;
+	}
 }
-
-/* SM - Small Screen */
-/* @media only screen and (max-width: 576px){
-
-} */
-
 
 /* @timiodulate css template */
