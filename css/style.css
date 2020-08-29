@@ -15,13 +15,8 @@ html {
 	--text: hsl(249, 10%, 26%);
 }
 
-/* Dark mode */
-/* html[data-theme = 'dark'] {
-   
-} */
-
 body {
-	/* height: 100vh; */
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
